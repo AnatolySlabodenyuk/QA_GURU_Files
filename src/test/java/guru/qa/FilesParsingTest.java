@@ -2,23 +2,15 @@ package guru.qa;
 
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import com.opencsv.CSVReader;
-//import guru.qa.model.Glossary;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class FilesParsingTest {
@@ -36,6 +28,7 @@ public class FilesParsingTest {
             while((entry = zis.getNextEntry()) != null) {
                 name = entry.getName();
                 size=entry.getSize();
+                System.out.println("//////////////////////////////////////////");
                 System.out.printf("File name: %s \t File size: %d \n", name, size);
 
                 if (entry.getName().endsWith(".pdf")) {

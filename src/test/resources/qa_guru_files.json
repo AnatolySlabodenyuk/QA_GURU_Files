@@ -1,0 +1,9 @@
+{
+  "Name": "Anatoly",
+  "LastName": "Slabodenyuk",
+  "Email": "SlabodenyukAnatoly@gmail.com",
+  "Gender": "Male",
+  "Age": 26,
+  "Subjects": ["English", "Maths", "Arts"],
+  "Hobbies": ["Sports", "Reading"]
+}
