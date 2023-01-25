@@ -15,7 +15,7 @@ public class JsonParseTest {
         ObjectMapper mapper = new ObjectMapper();
 
         try (
-                InputStream resource = cl.getResourceAsStream("qa_guru_files.json");
+                InputStream resource = cl.getResourceAsStream("example/qa_guru_files.json");
                 InputStreamReader reader = new InputStreamReader(resource);
         ) {
             ManJson manJson = objectMapper.readValue(reader, ManJson.class);
