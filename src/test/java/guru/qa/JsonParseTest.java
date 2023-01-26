@@ -12,17 +12,16 @@ public class JsonParseTest {
     ObjectMapper objectMapper = new ObjectMapper();
     @Test
     void jsonParse() throws Exception {
-        ObjectMapper mapper = new ObjectMapper();
 
         try (
                 InputStream resource = cl.getResourceAsStream("example/qa_guru_files.json");
                 InputStreamReader reader = new InputStreamReader(resource);
         ) {
             ManJson manJson = objectMapper.readValue(reader, ManJson.class);
-            assertThat(manJson.Name).isEqualTo("Anatoly");
-            assertThat(manJson.Gender).isEqualTo("Male");
-            assertThat(manJson.Age).isEqualTo(26);
-            assertThat(manJson.Subjects).contains("English", "Arts");
+            assertThat(manJson.name).isEqualTo("Anatoly");
+            assertThat(manJson.gender).isEqualTo("Male");
+            assertThat(manJson.age).isEqualTo(26);
+            assertThat(manJson.subjects).contains("English", "Arts");
         }
     }
 }
